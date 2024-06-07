@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+    <main class="form-page">
+      <h1>Ajouter un étudiant</h1>
+      <form method="POST">
+        <label for="first_name">Prénom</label
+        ><input type="text" name="first_name" id="first_name" />
+        <label for="last_name">Nom</label
+        ><input type="text" name="last_name" id="last_name" />
+        <label for="github_username">Pseudo github</label
+        ><input type="text" name="github_username" id="github_username" />
+        <label for="profile_picture_url">Image de profil</label
+        ><input
+          type="text"
+          name="profile_picture_url"
+          id="profile_picture_url"
+        />
+        <label for="promotion">Promotion</label>
+        <select name="promotion" id="id">
+          <% promoList.forEach(promo => { %>
+            <option value="1"><%= promo.name %></option>
+          <% }) %>
+        </select>
+        <button type="submit">Envoyer</button>
+      </form>
+    </main>
+
+    <!-- Pied de page -->
+    <%- include('partials/footer') %>
